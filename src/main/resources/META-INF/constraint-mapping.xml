@@ -4,41 +4,41 @@
                      xsi:schemaLocation="http://jboss.org/xml/ns/javax/validation/mapping validation-mapping-1.1.xsd"
                      xmlns="http://jboss.org/xml/ns/javax/validation/mapping">
 
-    <constraint-definition annotation="com.raycloud.codehorde.validator.constraints.EnumString">
+    <constraint-definition annotation="com.github.codehorde.validator.constraints.EnumString">
         <validated-by>
-            <value>com.raycloud.codehorde.validator.internal.EnumStringValidatorForCharSequence</value>
-            <value>com.raycloud.codehorde.validator.internal.EnumStringValidatorForIterable</value>
+            <value>com.github.codehorde.validator.internal.EnumStringValidatorForCharSequence</value>
+            <value>com.github.codehorde.validator.internal.EnumStringValidatorForIterable</value>
         </validated-by>
     </constraint-definition>
 
-    <constraint-definition annotation="com.raycloud.codehorde.validator.constraints.EscapeString">
+    <constraint-definition annotation="com.github.codehorde.validator.constraints.EscapeString">
         <validated-by>
-            <value>com.raycloud.codehorde.validator.internal.EscapeStringValidatorForCharSequence</value>
-            <value>com.raycloud.codehorde.validator.internal.EscapeStringValidatorForCharSequenceIterable</value>
+            <value>com.github.codehorde.validator.internal.EscapeStringValidatorForCharSequence</value>
+            <value>com.github.codehorde.validator.internal.EscapeStringValidatorForCharSequenceIterable</value>
         </validated-by>
     </constraint-definition>
 
-    <constraint-definition annotation="com.raycloud.codehorde.validator.constraints.In">
+    <constraint-definition annotation="com.github.codehorde.validator.constraints.In">
         <validated-by>
-            <value>com.raycloud.codehorde.validator.internal.InValidator</value>
+            <value>com.github.codehorde.validator.internal.InValidator</value>
         </validated-by>
     </constraint-definition>
 
-    <constraint-definition annotation="com.raycloud.codehorde.validator.constraints.Numeric">
+    <constraint-definition annotation="com.github.codehorde.validator.constraints.Numeric">
         <validated-by>
-            <value>com.raycloud.codehorde.validator.internal.NumericValidatorForCharSequence</value>
+            <value>com.github.codehorde.validator.internal.NumericValidatorForCharSequence</value>
         </validated-by>
     </constraint-definition>
 
-    <constraint-definition annotation="com.raycloud.codehorde.validator.constraints.URL">
+    <constraint-definition annotation="com.github.codehorde.validator.constraints.URL">
         <validated-by>
-            <value>com.raycloud.codehorde.validator.internal.URLValidator</value>
+            <value>com.github.codehorde.validator.internal.URLValidator</value>
         </validated-by>
     </constraint-definition>
 
-    <constraint-definition annotation="com.raycloud.codehorde.validator.constraints.NonNullElement">
+    <constraint-definition annotation="com.github.codehorde.validator.constraints.NonNullElement">
         <validated-by>
-            <value>com.raycloud.codehorde.validator.internal.NonNullElementValidatorForIterable</value>
+            <value>com.github.codehorde.validator.internal.NonNullElementValidatorForIterable</value>
         </validated-by>
     </constraint-definition>
 
@@ -47,21 +47,21 @@
      -->
     <constraint-definition annotation="javax.validation.constraints.Min">
         <validated-by include-existing-validators="true">
-            <value>com.raycloud.codehorde.validator.internal.MinValidatorForCharSequenceIterable</value>
-            <value>com.raycloud.codehorde.validator.internal.MinValidatorForNumberIterable</value>
+            <value>com.github.codehorde.validator.internal.MinValidatorForCharSequenceIterable</value>
+            <value>com.github.codehorde.validator.internal.MinValidatorForNumberIterable</value>
         </validated-by>
     </constraint-definition>
 
     <constraint-definition annotation="javax.validation.constraints.Max">
         <validated-by include-existing-validators="true">
-            <value>com.raycloud.codehorde.validator.internal.MaxValidatorForCharSequenceIterable</value>
-            <value>com.raycloud.codehorde.validator.internal.MaxValidatorForNumberIterable</value>
+            <value>com.github.codehorde.validator.internal.MaxValidatorForCharSequenceIterable</value>
+            <value>com.github.codehorde.validator.internal.MaxValidatorForNumberIterable</value>
         </validated-by>
     </constraint-definition>
 
     <constraint-definition annotation="org.hibernate.validator.constraints.Length">
         <validated-by include-existing-validators="true">
-            <value>com.raycloud.codehorde.validator.internal.LengthValidatorForCharSequenceIterable</value>
+            <value>com.github.codehorde.validator.internal.LengthValidatorForCharSequenceIterable</value>
         </validated-by>
     </constraint-definition>
 </constraint-mappings>
