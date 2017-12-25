@@ -23,6 +23,8 @@ public class ControllerLocalValidatorFactoryBean extends LocalValidatorFactoryBe
      */
     @Override
     protected void processConstraintViolations(Set<ConstraintViolation<Object>> violations, Errors errors) {
-        throw new ConstraintViolationException(violations);
+        if (violations != null && !violations.isEmpty()) {
+            throw new ConstraintViolationException(violations);
+        }
     }
 }
