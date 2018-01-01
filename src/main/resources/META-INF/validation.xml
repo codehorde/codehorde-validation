@@ -5,8 +5,7 @@
                    xsi:schemaLocation="http://jboss.org/xml/ns/javax/validation/configuration">
 
     <!--
-        org.hibernate.validator.internal.engine.DefaultParameterNameProvider会有arg0不太容易辨识的标识，
-        ReflectionParameterNameProvider也可能会有，java 1.8就ok
+        org.hibernate.validator.internal.engine.DefaultParameterNameProvider
 
         <parameter-name-provider>
             org.hibernate.validator.parameternameprovider.ReflectionParameterNameProvider
