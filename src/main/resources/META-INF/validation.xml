@@ -15,7 +15,7 @@
     <!-- 校验规则 -->
     <constraint-mapping>/META-INF/constraint-mapping.xml</constraint-mapping>
 
-    <!-- 校验出现错误立即返回，只有一个ConstraintViolation -->
+    <!-- 校验出现错误立即返回，最多只会有一个ConstraintViolation -->
     <property name="hibernate.validator.fail_fast">true</property>
 
     <!--
