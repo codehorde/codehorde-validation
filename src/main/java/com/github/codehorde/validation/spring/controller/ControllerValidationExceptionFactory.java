@@ -1,6 +1,5 @@
 package com.github.codehorde.validation.spring.controller;
 
-import com.tongbanjie.xd.commons.exception.ArgumentException;
 import com.github.codehorde.validation.spring.ValidationExceptionFactory;
 import org.hibernate.validator.internal.engine.path.PathImpl;
 
@@ -23,11 +22,12 @@ public class ControllerValidationExceptionFactory implements ValidationException
                 String propertyPath = extractPrettyPropertyPath(violation);
                 Object invalidValue = violation.getInvalidValue();
                 String reason = violation.getMessage();
-                throw new ArgumentException(propertyPath, reason, invalidValue);
+                String message = String.format(propertyPath, reason, invalidValue);
+                throw new IllegalArgumentException(message);
             }
         }
 
-        return new ArgumentException("参数错误");//default..
+        return new IllegalArgumentException("参数错误");//default..
     }
 
     private String extractPrettyPropertyPath(ConstraintViolation<Object> violation) {
